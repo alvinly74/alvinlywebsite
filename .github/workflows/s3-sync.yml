@@ -15,4 +15,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           region: us-east-1  # Replace with your desired region
       - name: Upload content to S3
-        run: aws s3 cp --recursive . s3://alvinlywebsite
+        run: aws s3 cp --recursive . --aws-region us-east-1 s3://alvinlywebsite
